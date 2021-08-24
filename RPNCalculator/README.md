@@ -11,5 +11,7 @@ An RPN expression (or postfix expression) is one of the following:
 Examples:
 
 20 5 /         ->  20/5 = 4
+
 4 2 + 3 -      ->  (4+2)-3 = 3
+
 3 5 8 * 7 + *  ->  ((5*8)+7)*3 = 141
