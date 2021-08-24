@@ -14,4 +14,4 @@ Examples:
 
 * 4 2 + 3 - is equivalent to (4+2)-3 (which is equal to 3).
 
-3 5 8 * 7 + * is equivalent to ((5*8)+7)*3 (which is equal to 141).
+* 3 5 8 * 7 + * is equivalent to ((5*8)+7)*3 (which is equal to 141).
