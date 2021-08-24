@@ -10,8 +10,8 @@ An RPN expression (or postfix expression) is one of the following:
 
 Examples:
 
-20 5 /         ->  20/5 = 4
+* 20 5 / is equivalent to 20/5 (which is equal to 4).
 
-4 2 + 3 -      ->  (4+2)-3 = 3
+* 4 2 + 3 - is equivalent to (4+2)-3 (which is equal to 3).
 
-3 5 8 * 7 + *  ->  ((5*8)+7)*3 = 141
+3 5 8 * 7 + * is equivalent to ((5*8)+7)*3 (which is equal to 141).
