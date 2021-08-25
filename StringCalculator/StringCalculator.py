@@ -7,7 +7,7 @@ def add(numbers_string):
     numbers = re.split(',|\n', numbers_string)
     error_message = __get_error_message_if_invalid(numbers)
 
-    return __add_numbers(numbers) if error_message is None else error_message
+    return __add_numbers(numbers) if not error_message else error_message
 
 
 def __get_error_message_if_invalid(numbers):
