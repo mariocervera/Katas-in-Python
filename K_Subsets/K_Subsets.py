@@ -13,7 +13,7 @@ def all_k_subsets(input_set):
 def k_subsets(input_set, k):
     result = []
 
-    if(k == 0):
+    if k == 0:
         result.append([])
     else:
         for element in input_set:
