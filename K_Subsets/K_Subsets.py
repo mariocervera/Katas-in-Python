@@ -1,31 +1,32 @@
-def all_k_subsets(input_list):
+# In this program, sets are represented as lists because the order of the elements is important.
+
+def all_k_subsets(input_set):
     result = []
 
-    N = len(input_list) + 1
+    N = len(input_set) + 1
     for k in range(N):
-        for k_subset in k_subsets(input_list, k):
+        for k_subset in k_subsets(input_set, k):
             result.append(k_subset)
 
     return result
 
-def k_subsets(input_list, k):
+def k_subsets(input_set, k):
     result = []
 
     if(k == 0):
         result.append([])
     else:
-        for element in input_list:
-            input_list = remove_first_element_from(input_list)
-            subsets = k_subsets(input_list, k-1)
-            for subset in subsets:
-                result.append(join_as_list(element, subset))
+        for element in input_set:
+            input_set = remove_first_element(input_set)
+            for subset in k_subsets(input_set, k-1):
+                result.append(join(element, subset))
 
     return result
 
-def remove_first_element_from(input_list):
-    return input_list[1:]
+def remove_first_element(input_set):
+    return input_set[1:]
 
-def join_as_list(head, tail):
-    l = [head]
-    l.extend(tail)
-    return l
+def join(head, tail):
+    result = [head]
+    result.extend(tail)
+    return result
