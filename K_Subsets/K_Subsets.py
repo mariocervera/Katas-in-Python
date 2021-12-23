@@ -17,16 +17,16 @@ def k_subsets(input_set, k):
         result.append([])
     else:
         for element in input_set:
-            input_set = remove_first_element(input_set)
+            input_set = __remove_first_element(input_set)
             for subset in k_subsets(input_set, k-1):
-                result.append(join(element, subset))
+                result.append(__join(element, subset))
 
     return result
 
-def remove_first_element(input_set):
+def __remove_first_element(input_set):
     return input_set[1:]
 
-def join(head, tail):
+def __join(head, tail):
     result = [head]
     result.extend(tail)
     return result
